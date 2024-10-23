@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="index.css"> <!-- Adjust this path if necessary -->
+</head>
+<body>
+  <div class="container">
+    <h1>ACCOUNTS TRACKER</h1>
+    
+    <div class="expense-form">
+      <input type="text" id="expense-name" placeholder="Expense Name" required>
+      <input type="number" id="expense-amount" placeholder="Amount" required>
+      <input type="date" id="expense-date" required>
+      <select id="expense-category">
+        <option value="shopping">Shopping</option>
+        <option value="Income Tax">Income Tax</option>
+        <option value="Office Supplies">Office Supplies</option>
+        <option value="Repairs">Repairs</option>
+        <option value="Travel Expenses">Travel Expenses</option>
+        <option value="Depreciation">Depreciation</option>
+        <option value="Bank Charges">Bank Charges</option>
+        <option value="Payroll">Payroll</option>
+        <option value="other">Other</option> <!-- Added "Other" here -->
+      </select>
+      <button id="add-expense">Add Expense</button>
+    </div>
+
+    <div class="filter">
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option value="all">All</option>
+        <option value="shopping">Shopping</option>
+        <option value="Income Tax">Income Tax</option>
+        <option value="Office Supplies">Office Supplies</option>
+        <option value="Repairs">Repairs</option>
+        <option value="Travel Expenses">Travel Expenses</option>
+        <option value="Depreciation">Depreciation</option>
+        <option value="Bank Charges">Bank Charges</option>
+        <option value="Payroll">Payroll</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <table id="expense-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="expense-list">
+        <!-- Expenses will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <div class="total-amount">
+      Total: <span id="total-amount">0.00</span>
+    </div>
+  </div>
+
+  <script src="/server/index.js"></script> <!-- Adjust this path if necessary -->
+</body>
+</html>
